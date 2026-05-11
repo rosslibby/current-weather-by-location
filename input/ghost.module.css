@@ -1,0 +1,14 @@
+.wrapper {
+  border-bottom-left-radius: 0.375rem;
+  border-top-left-radius: 0.375rem;
+  box-sizing: border-box;
+  color: #414c59;
+  font-size: 1.125rem;
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  padding: 1rem 1.25rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

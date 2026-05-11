@@ -1,0 +1,16 @@
+.suggestions {
+  left: 0;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.suggestion {
+  color: #414c59;
+}
+
+.active {
+  color: #a6b4c4;
+}
