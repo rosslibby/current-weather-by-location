@@ -40,3 +40,10 @@ The application provides a flexible search interface for global weather data:
   - Suggestions appear dynamically as you type.
   - Navigate suggestions with **Arrow Keys**.
   - Select a suggestion with the **Right Arrow** or **Tab** key.
+
+## Usage examples
+|Type|Input Example|Result|
+|-|-|-|
+|**City Name**|`Austin, TX`|Displays current conditions for Austin, Texas.|
+|**Zip Code**|`33131`|Displays weather for the Brickell neighborhood in Miami, FL|
+|**Coordinates**|`40.71, -74.01`|Displays precise weather data for Lower Manhattan, NYC.|
