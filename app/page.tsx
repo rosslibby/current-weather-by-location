@@ -3,6 +3,7 @@
 import { useContext } from 'react';
 import { searchCtx } from '@/search';
 import SearchInput from '@/input';
+import Forecast from '@/forecast';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
           <SearchInput />
           {loading && <p>Loading...</p>}
         </div>
+        <Forecast />
       </main>
     </div>
   );

@@ -1,0 +1,8 @@
+.forecast {
+  max-width: 18rem;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+}
