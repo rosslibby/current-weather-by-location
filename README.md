@@ -47,3 +47,10 @@ The application provides a flexible search interface for global weather data:
 |**City Name**|`Austin, TX`|Displays current conditions for Austin, Texas.|
 |**Zip Code**|`33131`|Displays weather for the Brickell neighborhood in Miami, FL|
 |**Coordinates**|`40.71, -74.01`|Displays precise weather data for Lower Manhattan, NYC.|
+
+## Connectivity Validation
+As per the security requirements, the application is strictly isolated from the public internet.
+
+- **Public Access Test:** Attempting to access [http://10.0.139.28:3000](http://10.0.139.28:3000) without an active VPN connection will result in a Connection Timeout.
+- **Network Path:** Because the instance is located in a Private Subnet without a Public IP address or an Internet Gateway route for ingress, the application remains completely invisible to external scans and unauthorized traffic.
+- **Internal DNS (Optional):** If using a private Route53 hosted zone, queries from outside the VPC will return NXDOMAIN, as the records are only resolvable within the authorized network environment.
