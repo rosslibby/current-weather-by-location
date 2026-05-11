@@ -22,7 +22,6 @@ export async function GET(
       units: 'imperial',
       appid: API_KEY,
     });
-    console.log(`[forecast:url]`, `${BASE_URL}/data/2.5/weather?${searchParams}`)
     const result = await fetch(`${BASE_URL}/data/2.5/weather?${searchParams}`)
       .then((res) => res.json())
       .catch((error) => ({
