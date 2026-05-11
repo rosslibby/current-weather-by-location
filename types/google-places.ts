@@ -1,26 +1,23 @@
-export type Match = {
+type Match = {
   endOffset: number;
 };
-export type StructuredFormat = {
+type StructuredFormat = {
   mainText: SuggestionText;
   secondaryText: {
     text: string;
   };
 };
-export type PlacePrediction = {
+type PlacePrediction = {
   place: string;
   placeId: string;
   text: SuggestionText;
   structuredFormat: StructuredFormat;
   types: string[];
 };
-export type SuggestionText = {
+type SuggestionText = {
   text: string;
   matches: Match[];
 };
 export type Suggestion = {
   placePrediction: PlacePrediction;
-};
-export type Suggestions = {
-  suggestions: Suggestion[];
 };

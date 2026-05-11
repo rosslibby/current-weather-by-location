@@ -1,4 +1,4 @@
-export type LocationName = {
+type LocationName = {
   name: string;
   local_names?: Record<string, string>;
   lat: number;
@@ -7,7 +7,7 @@ export type LocationName = {
   state: string;
 };
 
-export type PostalCode = {
+type PostalCode = {
   zip: string;
   name: string;
   lat: number;
