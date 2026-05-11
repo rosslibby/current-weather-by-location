@@ -14,20 +14,12 @@ export async function GET(
   const sessionTokenCookie = cookieStore.get('session_token');
   const sessionToken = sessionTokenCookie?.value || crypto.randomUUID();
 
-  const sessionTokenPayload = {
-    value: sessionToken,
-    isNew: typeof sessionTokenCookie?.value === 'undefined',
-  };
-
   if (!sessionTokenCookie) {
-    console.log(`🍪 Assigning new session token: ${sessionToken}`);
     cookieStore.set('session_token', sessionToken, {
       httpOnly: true,
       secure: true,
       path: '/',
     });
-  } else {
-    console.log(`⚡️ Using existing session token: ${sessionTokenCookie.value}`);
   }
 
   try {
@@ -58,11 +50,10 @@ export async function GET(
 
     return NextResponse.json({
       suggestions: data.suggestions ? parseSuggestions(data.suggestions) : [],
-      sessionToken: sessionTokenPayload,
     }, { status: 200 });
   } catch (error) {
     console.error('There was an error getting autocomplete predictions for the requested search term:', error);
-    return NextResponse.json({ error, sessionToken: sessionTokenPayload }, { status: 500 });
+    return NextResponse.json({ error }, { status: 500 });
   }
 }
 
