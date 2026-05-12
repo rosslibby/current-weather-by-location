@@ -1,4 +1,6 @@
 .suggestions {
+  background-color: #2325344f;
+  backdrop-filter: blur(3px);
   left: 0;
   list-style: none;
   padding: 0;
