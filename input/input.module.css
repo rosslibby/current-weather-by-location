@@ -68,6 +68,11 @@
   font-size: 1.125rem;
   padding: 1rem 1.25rem;
 
+  svg {
+    fill: #ffffff;
+    width: 2rem;
+  }
+
   &:disabled {
     /* background-color: #2325349e; */
     /* background-color: #232534; */
